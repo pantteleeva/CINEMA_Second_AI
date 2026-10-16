@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оппенгеймер — KinoStream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header scrolled">
+    <div class="header__inner">
+      <a href="index.html" class="logo">Kino<span>Stream</span></a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link active">Фильмы</a>
+        <a href="catalog.html" class="nav__link">Сериалы</a>
+        <a href="#" class="nav__link">Мультфильмы</a>
+        <a href="#" class="nav__link">Новинки</a>
+        <a href="#" class="nav__link">Мой список</a>
+      </nav>
+      <div class="header__actions">
+        <button class="search-btn" aria-label="Поиск">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="notif-btn" aria-label="Уведомления">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </button>
+        <div class="user-menu">
+          <img src="https://i.pravatar.cc/100?img=12" alt="User" class="user-avatar">
+          <span class="user-name">Алексей</span>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html" class="active">Фильмы</a>
+    <a href="catalog.html">Сериалы</a>
+    <a href="#">Мультфильмы</a>
+    <a href="#">Новинки</a>
+    <a href="#">Мой список</a>
+  </div>
+
+  <main class="movie-page">
+    <!-- Movie Hero -->
+    <div class="movie-hero">
+      <div class="movie-hero__bg" style="background-image: url('images/hero-oppenheimer.jpg');"></div>
+      
+      <div class="movie-poster">
+        <img src="images/oppenheimer.jpg" alt="Оппенгеймер">
+      </div>
+
+      <div class="movie-info">
+        <h1 class="movie-info__title">Оппенгеймер</h1>
+        
+        <div class="movie-info__meta">
+          <span>2023</span>
+          <span>•</span>
+          <span>180 мин</span>
+          <span class="age">18+</span>
+          <span>•</span>
+          <span>Драма, История, Биография</span>
+        </div>
+
+        <div class="movie-info__ratings">
+          <div class="rating-item">
+            <span class="star">★</span>
+            <span class="score">8.9</span>
+          </div>
+          <div class="rating-item">
+            <span style="opacity:0.7">IMDb</span>
+            <span>8.6</span>
+          </div>
+          <div class="rating-item">
+            <span style="opacity:0.7">Кинопоиск</span>
+            <span>8.7</span>
+          </div>
+        </div>
+
+        <p class="movie-info__desc">
+          История жизни Дж. Роберта Оппенгеймера, физика-теоретика, который руководил разработкой атомной бомбы в рамках Манхэттенского проекта во время Второй мировой войны.
+        </p>
+
+        <div class="movie-info__buttons">
+          <button class="btn btn--primary">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Смотреть
+          </button>
+          <button class="btn btn--secondary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Трейлер
+          </button>
+          <button class="btn btn--secondary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            В мой список
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actors -->
+    <section class="actors-section">
+      <div class="section__header" style="padding:0; margin-bottom:20px;">
+        <h2 class="section__title">Актёры и создатели</h2>
+      </div>
+      <div class="actors-list">
+        <div class="actor-card">
+          <img src="https://i.pravatar.cc/150?img=33" alt="Киллиан Мёрфи" class="actor-card__photo">
+          <div class="actor-card__name">Киллиан Мёрфи</div>
+          <div class="actor-card__role">Оппенгеймер</div>
+        </div>
+        <div class="actor-card">
+          <img src="https://i.pravatar.cc/150?img=5" alt="Эмили Блант" class="actor-card__photo">
+          <div class="actor-card__name">Эмили Блант</div>
+          <div class="actor-card__role">Китти Оппенгеймер</div>
+        </div>
+        <div class="actor-card">
+          <img src="https://i.pravatar.cc/150?img=11" alt="Роберт Дауни мл." class="actor-card__photo">
+          <div class="actor-card__name">Роберт Дауни мл.</div>
+          <div class="actor-card__role">Льюис Штраус</div>
+        </div>
+        <div class="actor-card">
+          <img src="https://i.pravatar.cc/150?img=9" alt="Флоренс Пью" class="actor-card__photo">
+          <div class="actor-card__name">Флоренс Пью</div>
+          <div class="actor-card__role">Джин Тэтлок</div>
+        </div>
+        <div class="actor-card">
+          <img src="https://i.pravatar.cc/150?img=15" alt="Мэтт Деймон" class="actor-card__photo">
+          <div class="actor-card__name">Мэтт Деймон</div>
+          <div class="actor-card__role">Лесли Гровс</div>
+        </div>
+        <div class="actor-card">
+          <img src="https://i.pravatar.cc/150?img=20" alt="Рами Малек" class="actor-card__photo">
+          <div class="actor-card__name">Рами Малек</div>
+          <div class="actor-card__role">Дэвид Хилл</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active">Описание</button>
+      <button class="tab">Сезоны</button>
+      <button class="tab">Похожие</button>
+      <button class="tab">Отзывы</button>
+    </div>
+
+    <!-- Similar movies -->
+    <section class="section" style="padding-top:10px;">
+      <div class="section__header">
+        <h2 class="section__title">Похожие фильмы</h2>
+      </div>
+      <div class="carousel">
+        <button class="carousel__btn carousel__btn--prev">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="carousel__track">
+          <div class="movie-card">
+            <div class="movie-card__poster">
+              <img src="images/interstellar.jpg" alt="Интерстеллар">
+            </div>
+            <div class="movie-card__info">
+              <div class="movie-card__title">Интерстеллар</div>
+              <div class="movie-card__meta"><span class="movie-card__rating">★ 8.9</span> · 2014</div>
+            </div>
+          </div>
+          <div class="movie-card">
+            <div class="movie-card__poster">
+              <img src="images/inception.jpg" alt="Начало">
+            </div>
+            <div class="movie-card__info">
+              <div class="movie-card__title">Начало</div>
+              <div class="movie-card__meta"><span class="movie-card__rating">★ 8.8</span> · 2010</div>
+            </div>
+          </div>
+          <div class="movie-card">
+            <div class="movie-card__poster">
+              <img src="images/matrix.jpg" alt="Матрица">
+            </div>
+            <div class="movie-card__info">
+              <div class="movie-card__title">Матрица</div>
+              <div class="movie-card__meta"><span class="movie-card__rating">★ 8.7</span> · 1999</div>
+            </div>
+          </div>
+          <div class="movie-card">
+            <div class="movie-card__poster">
+              <img src="images/joker.jpg" alt="Джокер">
+            </div>
+            <div class="movie-card__info">
+              <div class="movie-card__title">Джокер</div>
+              <div class="movie-card__meta"><span class="movie-card__rating">★ 8.4</span> · 2019</div>
+            </div>
+          </div>
+          <div class="movie-card">
+            <div class="movie-card__poster">
+              <img src="images/batman.jpg" alt="Бэтмен">
+            </div>
+            <div class="movie-card__info">
+              <div class="movie-card__title">Бэтмен</div>
+              <div class="movie-card__meta"><span class="movie-card__rating">★ 7.8</span> · 2022</div>
+            </div>
+          </div>
+          <div class="movie-card">
+            <div class="movie-card__poster">
+              <img src="images/parasite.jpg" alt="Паразиты">
+            </div>
+            <div class="movie-card__info">
+              <div class="movie-card__title">Паразиты</div>
+              <div class="movie-card__meta"><span class="movie-card__rating">★ 8.6</span> · 2019</div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel__btn carousel__btn--next">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__logo">Kino<span>Stream</span></div>
+        <p class="footer__desc">Современный онлайн-кинотеатр с лучшими фильмами и сериалами.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="#">Новинки</a>
+        <a href="#">Мой список</a>
+      </div>
+      <div class="footer__col">
+        <h4>Поддержка</h4>
+        <a href="#">Помощь</a>
+        <a href="#">FAQ</a>
+        <a href="#">Контакты</a>
+      </div>
+      <div class="footer__col">
+        <h4>Правовая информация</h4>
+        <a href="#">Пользовательское соглашение</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 KinoStream. Все права защищены.</span>
+    </div>
+  </footer>
+
+  <div class="search-overlay">
+    <div class="search-box">
+      <input type="text" placeholder="Поиск фильмов, сериалов, актёров...">
+      <button class="close-search">×</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

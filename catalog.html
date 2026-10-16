@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог фильмов — KinoStream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header scrolled">
+    <div class="header__inner">
+      <a href="index.html" class="logo">Kino<span>Stream</span></a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link active">Фильмы</a>
+        <a href="catalog.html" class="nav__link">Сериалы</a>
+        <a href="#" class="nav__link">Мультфильмы</a>
+        <a href="#" class="nav__link">Новинки</a>
+        <a href="#" class="nav__link">Мой список</a>
+      </nav>
+      <div class="header__actions">
+        <button class="search-btn" aria-label="Поиск">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="notif-btn" aria-label="Уведомления">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </button>
+        <div class="user-menu">
+          <img src="https://i.pravatar.cc/100?img=12" alt="User" class="user-avatar">
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html" class="active">Фильмы</a>
+    <a href="catalog.html">Сериалы</a>
+    <a href="#">Мультфильмы</a>
+    <a href="#">Новинки</a>
+    <a href="#">Мой список</a>
+  </div>
+
+  <main class="catalog-page">
+    <div class="catalog-header">
+      <h1 class="catalog-title">Каталог фильмов</h1>
+      <div class="catalog-results">Найдено 1 248 фильмов</div>
+    </div>
+
+    <div class="catalog-layout">
+      <!-- Filters -->
+      <aside class="filters">
+        <div class="filter-group">
+          <div class="filter-group__title">Жанр</div>
+          <div class="filter-options">
+            <label class="filter-checkbox"><input type="checkbox" value="action" checked> Боевик</label>
+            <label class="filter-checkbox"><input type="checkbox" value="drama"> Драма</label>
+            <label class="filter-checkbox"><input type="checkbox" value="comedy"> Комедия</label>
+            <label class="filter-checkbox"><input type="checkbox" value="sci-fi"> Фантастика</label>
+            <label class="filter-checkbox"><input type="checkbox" value="horror"> Ужасы</label>
+            <label class="filter-checkbox"><input type="checkbox" value="thriller"> Триллер</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group__title">Год</div>
+          <div class="filter-range">
+            <input type="range" min="1990" max="2025" value="2015">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text-muted);margin-top:6px;">
+              <span>1990</span><span>2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group__title">Страна</div>
+          <select class="filter-select">
+            <option>Все страны</option>
+            <option>США</option>
+            <option>Россия</option>
+            <option>Великобритания</option>
+            <option>Южная Корея</option>
+            <option>Франция</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group__title">Рейтинг</div>
+          <div class="filter-range">
+            <input type="range" min="0" max="10" step="0.1" value="6.0">
+            <div style="font-size:13px;color:var(--text-secondary);margin-top:6px;">от 6.0</div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group__title">Сортировка</div>
+          <select class="filter-select">
+            <option>По популярности</option>
+            <option>По рейтингу</option>
+            <option>По дате (новые)</option>
+            <option>По алфавиту</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Grid -->
+      <div class="catalog-grid">
+        <div class="movie-card" data-href="movie.html">
+          <div class="movie-card__poster">
+            <span class="movie-card__badge">Новинка</span>
+            <img src="images/dune.jpg" alt="Дюна: Часть вторая">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Дюна: Часть вторая</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.7</span> · 2024</div>
+          </div>
+        </div>
+
+        <div class="movie-card" data-href="movie.html">
+          <div class="movie-card__poster">
+            <span class="movie-card__badge">Новинка</span>
+            <img src="images/oppenheimer.jpg" alt="Оппенгеймер">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Оппенгеймер</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.9</span> · 2023</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/johnwick.jpg" alt="Джон Уик 4">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Джон Уик 4</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 7.8</span> · 2023</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/guardians.jpg" alt="Стражи Галактики">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Стражи Галактики 3</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 7.9</span> · 2023</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/interstellar.jpg" alt="Интерстеллар">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Интерстеллар</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.9</span> · 2014</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/matrix.jpg" alt="Матрица">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Матрица</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.7</span> · 1999</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/inception.jpg" alt="Начало">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Начало</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.8</span> · 2010</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/parasite.jpg" alt="Паразиты">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Паразиты</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.6</span> · 2019</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/joker.jpg" alt="Джокер">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Джокер</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.4</span> · 2019</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/batman.jpg" alt="Бэтмен">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Бэтмен</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 7.8</span> · 2022</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/avatar.jpg" alt="Аватар">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Аватар: Путь воды</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 7.6</span> · 2022</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="movie-card__poster">
+            <img src="images/spiderman.jpg" alt="Человек-паук">
+          </div>
+          <div class="movie-card__info">
+            <div class="movie-card__title">Человек-паук: Нет пути домой</div>
+            <div class="movie-card__meta"><span class="movie-card__rating">★ 8.2</span> · 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__logo">Kino<span>Stream</span></div>
+        <p class="footer__desc">Современный онлайн-кинотеатр с лучшими фильмами и сериалами.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="#">Новинки</a>
+        <a href="#">Мой список</a>
+      </div>
+      <div class="footer__col">
+        <h4>Поддержка</h4>
+        <a href="#">Помощь</a>
+        <a href="#">FAQ</a>
+        <a href="#">Контакты</a>
+      </div>
+      <div class="footer__col">
+        <h4>Правовая информация</h4>
+        <a href="#">Пользовательское соглашение</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 KinoStream. Все права защищены.</span>
+    </div>
+  </footer>
+
+  <div class="search-overlay">
+    <div class="search-box">
+      <input type="text" placeholder="Поиск фильмов, сериалов, актёров...">
+      <button class="close-search">×</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
